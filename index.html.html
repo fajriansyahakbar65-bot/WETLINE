@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WETLINE · Groundwater-Triggered Pre-Fire Financing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#134D7E;--gold:#FFBF00;--red:#e04848;--bg:#F4F5F7;--ink:#14233a;--mut:#5a6a7e;--line:#e3e7ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#fff;border-bottom:3px solid var(--gold);padding:14px 26px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:5}
+header h1{font-size:22px;font-weight:900;color:var(--navy)} header h1 em{font-style:normal;color:var(--gold)}
+header .sub{font-size:13px;color:var(--mut)}
+.demo{margin-left:auto;background:#FFF6D6;border:1px solid var(--gold);color:#6b5200;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px}
+nav{display:flex;gap:6px;padding:12px 26px 0}
+nav button{border:0;background:#e8ecf2;color:var(--navy);font-weight:800;padding:10px 16px;border-radius:12px 12px 0 0;cursor:pointer;font-family:inherit;font-size:14px}
+nav button.on{background:#fff;box-shadow:0 -3px 0 var(--gold) inset}
+main{padding:0 26px 30px}
+.tab{display:none;background:#fff;border-radius:0 16px 16px 16px;padding:22px;box-shadow:0 6px 18px rgba(19,77,126,.08)}
+.tab.on{display:block}
+.row{display:grid;gap:16px}
+.c4{grid-template-columns:repeat(4,1fr)} .c2{grid-template-columns:1.6fr 1fr} .c3{grid-template-columns:repeat(3,1fr)}
+.kpi{background:var(--bg);border-radius:14px;padding:14px 16px}
+.kpi .l{font-size:12px;font-weight:800;color:var(--mut);letter-spacing:.6px;text-transform:uppercase}
+.kpi .v{font-size:28px;font-weight:900;color:var(--navy);margin-top:4px}
+.kpi .v.am{color:#b58600}.kpi .v.rd{color:var(--red)}
+h2{font-size:18px;color:var(--navy);font-weight:900;margin:18px 0 10px}
+.panel{border:1px solid var(--line);border-radius:14px;padding:14px}
+select,input[type=range]{font-family:inherit}
+select{padding:8px 10px;border-radius:10px;border:1px solid var(--line);font-weight:700;color:var(--navy)}
+label{font-size:13px;font-weight:700;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--navy);color:#fff;text-align:left;padding:8px;font-weight:800}
+td{padding:7px 8px;border-bottom:1px solid var(--line)}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-weight:800;font-size:12px}
+.p-a{background:var(--gold);color:#0f2f50}.p-r{background:var(--red);color:#fff}.p-g{background:#dbeafa;color:var(--navy)}.p-x{background:#eee;color:#555}
+.btn{border:0;background:var(--navy);color:#fff;font-weight:800;padding:10px 14px;border-radius:10px;cursor:pointer;font-family:inherit}
+.btn.g{background:var(--gold);color:#0f2f50}
+.flow{display:flex;gap:10px;align-items:stretch}
+.flow .s{flex:1;background:var(--bg);border-radius:12px;padding:12px;border-top:4px solid var(--navy)}
+.flow .s b{color:var(--navy)} .flow .ar{display:grid;place-items:center;color:var(--gold);font-weight:900;font-size:22px}
+.note{font-size:12px;color:var(--mut);margin-top:8px;line-height:1.5}
+.log{max-height:300px;overflow:auto}
+.toast{position:fixed;right:20px;bottom:20px;background:var(--navy);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.2);opacity:0;transition:.3s}
+.toast.on{opacity:1}
+@media(max-width:900px){.c4,.c2,.c3{grid-template-columns:1fr}}
+</style></head><body>
+<header>
+<svg width="40" height="40" viewBox="0 0 64 64"><defs><clipPath id="d"><path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4Z"/></clipPath></defs><path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4Z" fill="#134D7E"/><g clip-path="url(#d)"><rect x="0" y="40" width="64" height="30" fill="#1f6fb0"/><path d="M8 40q6-5 12 0t12 0t12 0t12 0" stroke="#FFBF00" stroke-width="4" fill="none"/></g></svg>
+<div><h1>WET<em>LINE</em></h1><div class="sub">Groundwater-triggered pre-fire financing window · Disaster Pooling Fund · Riau pilot</div></div>
+<div class="demo">Prototype · demonstration data, not field records</div>
+</header>
+<nav id="nav"><button class="on" data-t="t1">1 · Sense</button><button data-t="t2">2 · Trigger</button><button data-t="t3">3 · Release</button><button data-t="t4">4 · Ledger</button><button data-t="t5">About</button></nav>
+<main>
+<section class="tab on" id="t1">
+ <div class="row c4">
+  <div class="kpi"><div class="l">Pilot peat units</div><div class="v" id="k1">0</div></div>
+  <div class="kpi"><div class="l">Active stations</div><div class="v" id="k2">0</div></div>
+  <div class="kpi"><div class="l">Units in amber</div><div class="v am" id="k3">0</div></div>
+  <div class="kpi"><div class="l">Units in red</div><div class="v rd" id="k4">0</div></div>
+ </div>
+ <div class="row c2" style="margin-top:16px">
+  <div class="panel"><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><label>Peat unit</label><select id="unit"></select><label>Day</label><input type="range" id="day" min="0" max="119" value="119" style="flex:1"><b id="dayl"></b></div>
+   <svg id="chart" viewBox="0 0 760 300" width="100%"></svg>
+   <div class="note">Lines show each station's water-table depth (cm below peat surface). The thick navy line is the Wet-Line Index, the median of stations reporting that day. Missing transmissions appear as gaps, which the live system fills with the modelled water table.</div></div>
+  <div class="panel"><h2 style="margin-top:0">Station status today</h2><table><thead><tr><th>Station</th><th>Depth</th><th>Status</th></tr></thead><tbody id="st"></tbody></table>
+   <div class="note">Two-station rule. A unit counts as dry only when at least two stations agree, so one faulty or tampered sensor cannot trigger a release.</div></div>
+ </div>
+</section>
+<section class="tab" id="t2">
+ <div class="row c3">
+  <div class="panel"><label>Amber threshold (cm)</label><input type="range" id="ta" min="20" max="60" value="40" style="width:100%"><b id="tal">40 cm</b><div class="note">Default 40 cm, the high-danger boundary of Taufik et al. (2022) and the legal damage limit of PP 57/2016.</div></div>
+  <div class="panel"><label>Red threshold (cm)</label><input type="range" id="tr" min="40" max="100" value="60" style="width:100%"><b id="trl">60 cm</b><div class="note">Default 60 cm, the depth below which burned area was observed by Taufik et al. (2022).</div></div>
+  <div class="panel"><label>Cross-checks before release</label><div style="margin-top:8px;font-size:14px;line-height:1.9"><input type="checkbox" id="cx1" checked> No rain in last 3 days (BMKG)<br><input type="checkbox" id="cx2" checked> Two-station agreement</div></div>
+ </div>
+ <h2>Trigger events in the demonstration season</h2>
+ <div class="panel log"><table><thead><tr><th>Day</th><th>Peat unit</th><th>Index</th><th>Level</th><th>Cross-check</th><th>Decision</th></tr></thead><tbody id="ev"></tbody></table></div>
+</section>
+<section class="tab" id="t3">
+ <div class="flow"><div class="s"><b>Pooled fund</b><br>Principal kept intact, investment income used<div style="font-size:22px;font-weight:900;color:var(--navy);margin-top:6px">Rp716 bn</div><div class="note">Investment income reported by the Ministry of Finance (Silfia, 2025)</div></div><div class="ar">➜</div><div class="s" style="border-color:var(--gold)"><b>Amber tranche</b><br>Drilled wells, canal blocks, community fire patrols</div><div class="ar">➜</div><div class="s" style="border-color:var(--red)"><b>Red tranche</b><br>Pre-positioned suppression crews</div><div class="ar">➜</div><div class="s"><b>Recipients</b><br>BPBD, villages, Masyarakat Peduli Api</div></div>
+ <h2>Pre-approved plans (demonstration)</h2>
+ <div class="panel"><table><thead><tr><th>Peat unit</th><th>Recipient</th><th>Amber plan</th><th>Red plan</th><th>Released</th><th>Hours to account</th></tr></thead><tbody id="pl"></tbody></table>
+ <div class="note">Plan amounts are placeholders for interface testing. Real amounts come from proposals reviewed under BNPB Regulation 1/2026 before the dry season.</div></div>
+</section>
+<section class="tab" id="t4">
+ <div class="row c4"><div class="kpi"><div class="l">Hits</div><div class="v" id="h1">0</div></div><div class="kpi"><div class="l">Misses</div><div class="v rd" id="h2">0</div></div><div class="kpi"><div class="l">False alarms</div><div class="v am" id="h3">0</div></div><div class="kpi"><div class="l">Hit rate</div><div class="v" id="h4">0%</div></div></div>
+ <h2>Basis-risk ledger · triggers against burned-area polygons</h2>
+ <div class="panel log"><table><thead><tr><th>Peat unit</th><th>First amber</th><th>Burned polygon day</th><th>Lead time</th><th>Result</th></tr></thead><tbody id="lg"></tbody></table></div>
+ <div class="note">In operation, burned polygons come from SiPongi (Kementerian Kehutanan). The ledger is published every season and drives threshold recalibration in the Trigger tab.</div>
+</section>
+<section class="tab" id="t5">
+ <h2 style="margin-top:0">About this prototype</h2>
+ <p style="line-height:1.7;max-width:900px">WETLINE turns peat water-table readings into a public rule that releases pre-approved rewetting and patrol money from Indonesia's Disaster Pooling Fund before fires start. This page demonstrates the four modules described in the essay. All station series, burned polygons and plan amounts on this page are generated for demonstration and are <b>not</b> field records. Thresholds default to values from Taufik et al. (2022) and PP 57/2016.</p>
+ <p class="note">Rule owner · Head of BNPB. Data custodian · peat agency or Ministry of Forestry. Fund manager · BPDLH. Implementers · BPBD, villages and Masyarakat Peduli Api.</p>
+ <button class="btn g" style="margin-top:12px" onclick="reseed()">Generate a new demonstration season</button>
+</section>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const U=[{id:'BKS-01',reg:'Bengkalis',rec:'BPBD Bengkalis'},{id:'BKS-02',reg:'Bengkalis',rec:'Village fire group'},{id:'SAK-01',reg:'Siak',rec:'BPBD Siak'},{id:'SAK-02',reg:'Siak',rec:'Village fire group'}];
+const N=120;let D={},seed=7;
+function rnd(){seed=(seed*9301+49297)%233280;return seed/233280}
+function gen(){D={};U.forEach((u,ui)=>{const st=[];const dry=0.75+rnd()*0.7;const rains=[...Array(N)].map((_,d)=>rnd()<(0.16*(1-d/N)+0.02)?6+rnd()*20:0);
+ for(let s=0;s<4;s++){let v=15+rnd()*10;const off=(rnd()-.5)*10;const arr=[];const broken=(s==3&&ui==1);
+  for(let d=0;d<N;d++){v+=dry*(0.5+rnd()*0.6)-rains[d]*0.3;v=Math.max(0,Math.min(110,v));let x=v+off+(rnd()-.5)*3;if(broken&&d>70)x=95+rnd()*3;arr.push(rnd()<0.05?null:Math.max(0,x))}
+  st.push({id:u.id+'-S'+(s+1),v:arr,broken})}
+ const idx=[];for(let d=0;d<N;d++){const vals=st.map(s=>s.v[d]).filter(x=>x!=null).sort((a,b)=>a-b);idx.push(vals.length?vals[Math.floor(vals.length/2)]:null)}
+ const burn=[];for(let d=0;d<N;d++){if(idx[d]>58&&rnd()<0.035)burn.push(d)}
+ D[u.id]={st,idx,rains,burn}})}
+const $=i=>document.getElementById(i);
+function th(){return {a:+$('ta').value,r:+$('tr').value}}
+function agree(u,d,t){return D[u].st.filter(s=>s.v[d]!=null&&s.v[d]>t).length>=2}
+function noRain(u,d){const r=D[u].rains;return [0,1,2].every(k=>d-k<0||r[d-k]==0)}
+function level(u,d){const T=th(),x=D[u].idx[d];if(x==null)return 'g';const ok2=!$('cx2').checked;
+ if(x>T.r&&(ok2||agree(u,d,T.r)))return 'r';if(x>T.a&&(ok2||agree(u,d,T.a)))return 'a';return 'g'}
+function events(){const ev=[];U.forEach(u=>{let prev='g';for(let d=0;d<N;d++){const l=level(u.id,d);if(l!=prev&&l!='g'){const rain=$('cx1').checked?noRain(u.id,d):true;ev.push({d,u:u.id,x:D[u.id].idx[d],l,rain})}prev=l}});return ev.sort((a,b)=>a.d-b.d)}
+function chart(){const u=$('unit').value,day=+$('day').value,T=th(),s=$('chart');const X=d=>50+d*(690/(N-1)),Y=v=>20+v/110*250;let h='';
+ h+=`<rect x="50" y="${Y(T.a)}" width="690" height="${Y(T.r)-Y(T.a)}" fill="#FFBF00" opacity=".12"/><rect x="50" y="${Y(T.r)}" width="690" height="${Y(110)-Y(T.r)}" fill="#e04848" opacity=".08"/>`;
+ [0,20,40,60,80,100].forEach(v=>h+=`<line x1="50" x2="740" y1="${Y(v)}" y2="${Y(v)}" stroke="#e3e7ee"/><text x="44" y="${Y(v)+4}" font-size="11" text-anchor="end" fill="#7a8798">${v}</text>`);
+ h+=`<line x1="50" x2="740" y1="${Y(T.a)}" y2="${Y(T.a)}" stroke="#FFBF00" stroke-width="2" stroke-dasharray="6 4"/><text x="738" y="${Y(T.a)-4}" text-anchor="end" font-size="11" font-weight="800" fill="#b58600">amber ${T.a} cm</text>`;
+ h+=`<line x1="50" x2="740" y1="${Y(T.r)}" y2="${Y(T.r)}" stroke="#e04848" stroke-width="2" stroke-dasharray="6 4"/><text x="738" y="${Y(T.r)-4}" text-anchor="end" font-size="11" font-weight="800" fill="#e04848">red ${T.r} cm</text>`;
+ const col=['#7fa6c9','#9cb7d3','#b3c7dc','#c7d4e3'];
+ D[u].st.forEach((st,i)=>{let p='';st.v.forEach((v,d)=>{if(d>day||v==null)return;p+=(p&&st.v[d-1]!=null?'L':'M')+X(d)+' '+Y(v)});h+=`<path d="${p}" fill="none" stroke="${st.broken?'#c9a0a0':col[i]}" stroke-width="1.4"/>`});
+ let p='';D[u].idx.forEach((v,d)=>{if(d>day||v==null)return;p+=(p?'L':'M')+X(d)+' '+Y(v)});h+=`<path d="${p}" fill="none" stroke="#134D7E" stroke-width="3.2"/>`;
+ D[u].rains.forEach((r,d)=>{if(r>0&&d<=day)h+=`<rect x="${X(d)-2}" y="${Y(110)}" width="4" height="${Math.min(r,18)}" fill="#2f7fc1" opacity=".5"/>`});
+ D[u].burn.forEach(d=>{if(d<=day)h+=`<text x="${X(d)}" y="${Y(105)}" text-anchor="middle" font-size="14">🔥</text>`});
+ h+=`<text x="50" y="296" font-size="11" fill="#7a8798">Day 0</text><text x="740" y="296" text-anchor="end" font-size="11" fill="#7a8798">Day ${N-1}</text><text x="56" y="14" font-size="11" font-weight="800" fill="#134D7E">Depth below surface (cm)</text>`;
+ s.innerHTML=h;$('dayl').textContent='Day '+day;
+ $('st').innerHTML=D[u].st.map(st=>{const v=st.v[day];const tag=v==null?'<span class="pill p-x">no data</span>':v>T.r?'<span class="pill p-r">red</span>':v>T.a?'<span class="pill p-a">amber</span>':'<span class="pill p-g">wet</span>';return `<tr><td>${st.id}${st.broken?' ⚠':''}</td><td>${v==null?'·':v.toFixed(0)+' cm'}</td><td>${tag}</td></tr>`}).join('');
+ let na=0,nr=0;U.forEach(x=>{const l=level(x.id,day);if(l=='a')na++;if(l=='r')nr++});$('k1').textContent=U.length;$('k2').textContent=U.length*4;$('k3').textContent=na;$('k4').textContent=nr}
+function render(){$('tal').textContent=$('ta').value+' cm';$('trl').textContent=$('tr').value+' cm';chart();const ev=events();
+ $('ev').innerHTML=ev.map(e=>`<tr><td>${e.d}</td><td>${e.u}</td><td>${e.x.toFixed(0)} cm</td><td>${e.l=='r'?'<span class="pill p-r">RED</span>':'<span class="pill p-a">AMBER</span>'}</td><td>${e.rain?'passed':'rain, hold'}</td><td><b>${e.rain?(e.l=='r'?'Release tranche 2':'Release tranche 1'):'Wait 24 h and recheck'}</b></td></tr>`).join('')||'<tr><td colspan="6">No trigger with current thresholds</td></tr>';
+ $('pl').innerHTML=U.map((u,i)=>{const a=ev.find(e=>e.u==u.id&&e.l=='a'&&e.rain),r=ev.find(e=>e.u==u.id&&e.l=='r'&&e.rain);return `<tr><td>${u.id} · ${u.reg}</td><td>${u.rec}</td><td>Rp ${(250+i*40)} M</td><td>Rp ${(400+i*60)} M</td><td>${r?'<span class="pill p-r">T1 + T2</span>':a?'<span class="pill p-a">T1</span>':'<span class="pill p-x">armed</span>'}</td><td>${a?(24+i*6)+' h':'·'}</td></tr>`}).join('');
+ let hit=0,miss=0,fa=0;const rows=[];U.forEach(u=>{const first=ev.find(e=>e.u==u.id);const b=D[u.id].burn;
+  if(b.length){if(first&&first.d<=b[0]){hit++;rows.push([u.id,first.d,b[0],(b[0]-first.d)+' days','<span class="pill p-g">hit</span>'])}else{miss++;rows.push([u.id,first?first.d:'·',b[0],'·','<span class="pill p-r">miss</span>'])}}
+  else if(first){fa++;rows.push([u.id,first.d,'none','·','<span class="pill p-a">false alarm</span>'])}});
+ $('h1').textContent=hit;$('h2').textContent=miss;$('h3').textContent=fa;$('h4').textContent=(hit+miss?Math.round(hit/(hit+miss)*100):0)+'%';
+ $('lg').innerHTML=rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1800)}
+function reseed(){seed=Math.floor(Math.random()*9999)+1;gen();render();toast('New demonstration season generated')}
+$('unit').innerHTML=U.map(u=>`<option value="${u.id}">${u.id} · ${u.reg}</option>`).join('');
+['unit','day','ta','tr','cx1','cx2'].forEach(i=>$(i).addEventListener('input',render));
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#nav button,.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');$(b.dataset.t).classList.add('on')});
+gen();render();
+</script></body></html>
